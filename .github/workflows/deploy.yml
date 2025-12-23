@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -68,13 +68,13 @@ jobs:
       - name: Get AWS permissions
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::450226343468:role/GitHubDemo1
+          role-to-assume: arn:aws:iam::854196226697:role/Github-demo1
           aws-region: us-east-1
       - name: Deploy site
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         with:
-          bucket: gha-security-hosting-demo
+          bucket: gh-oidc-demo-bucket-0001
           dist-folder: ./dist
           # bucket-region: us-east-2
       - name: Output information
