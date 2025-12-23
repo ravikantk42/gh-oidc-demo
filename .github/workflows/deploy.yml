@@ -74,7 +74,7 @@ jobs:
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         with:
-          bucket: gh-oidc-demo-bucket-0001
+          bucket: gh-oidc-demo-bucket-0002
           dist-folder: ./dist
           bucket-region: us-east-1
       - name: Output information
