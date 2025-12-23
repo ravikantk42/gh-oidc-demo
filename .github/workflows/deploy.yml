@@ -76,7 +76,7 @@ jobs:
         with:
           bucket: gh-oidc-demo-bucket-0001
           dist-folder: ./dist
-          # bucket-region: us-east-2
+          bucket-region: us-east-1
       - name: Output information
         run: |
           echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
