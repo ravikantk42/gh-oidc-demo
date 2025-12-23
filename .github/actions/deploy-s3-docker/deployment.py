@@ -19,7 +19,7 @@ def run():
             relative_path = os.path.relpath(local_file_path, dist_folder)
             s3_client.upload_file(local_file_path, bucket, relative_path)
 
-    website_url = f'http://{bucket}.s3-website-{bucket_region}.amazonaws.com'
+    website_url = f'https://{bucket}.s3-website-{bucket_region}.amazonaws.com'
     print(f'::set-output name=website-url::{website_url}')
 
 
